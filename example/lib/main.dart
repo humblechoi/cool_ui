@@ -1,36 +1,40 @@
-import 'package:cool_ui_example/cool_u_i_example_icons.dart';
-import 'package:cool_ui_example/pages/custom_keyboard.dart';
-import 'package:cool_ui_example/pages/paint_event_demo.dart';
-import 'package:cool_ui_example/pages/popover_demo.dart';
-import 'package:cool_ui_example/pages/weui_toast_demo.dart';
+//import 'package:cool_ui_example/cool_u_i_example_icons.dart';
+//import 'package:cool_ui_example/pages/custom_keyboard.dart';
+//import 'package:cool_ui_example/pages/paint_event_demo.dart';
+//import 'package:cool_ui_example/pages/popover_demo.dart';
+//import 'package:cool_ui_example/pages/weui_toast_demo.dart';
 import 'package:cool_ui/cool_ui.dart';
+
 import 'package:flutter/material.dart';
 
-void main(){
+import 'cool_u_i_example_icons.dart';
+import 'pages/custom_keyboard.dart';
+import 'pages/paint_event_demo.dart';
+import 'pages/popover_demo.dart';
+import 'pages/weui_toast_demo.dart';
+
+void main() {
   NumberKeyboard.register();
   runApp(MyApp());
 }
-
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or press Run > Flutter Hot Reload in IntelliJ). Notice that the
-        // counter didn't reset back to zero; the application is not restarted.
-          primarySwatch: Colors.blue
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page')
-    );
+        title: 'Flutter Demo',
+        theme: ThemeData(
+            // This is the theme of your application.
+            //
+            // Try running your application with "flutter run". You'll see the
+            // application has a blue toolbar. Then, without quitting the app, try
+            // changing the primarySwatch below to Colors.green and then invoke
+            // "hot reload" (press "r" in the console where you ran "flutter run",
+            // or press Run > Flutter Hot Reload in IntelliJ). Notice that the
+            // counter didn't reset back to zero; the application is not restarted.
+            primarySwatch: Colors.blue),
+        home: MyHomePage(title: 'Flutter Demo Home Page'));
   }
 }
 
@@ -85,30 +89,33 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               leading: Icon(CoolUIExampleIcon.popover),
               title: Text("Popover"),
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PopoverDemo()));
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => PopoverDemo()));
               },
             ),
             ListTile(
               title: Text("PaintEvent"),
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>PaintEventDemo()));
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => PaintEventDemo()));
               },
             ),
             ListTile(
               title: Text("WeuiToastEvent"),
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>WeuiToastDemo()));
+              onTap: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => WeuiToastDemo()));
               },
             ),
             ListTile(
               title: Text("CustomKeyboardEvent"),
-              onTap: (){
-                Navigator.of(context).push(MaterialPageRoute(builder: (context)=>CustomKeyboardDemo()));
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => CustomKeyboardDemo()));
               },
             )
           ],
-        )
-    );
+        ));
   }
 }
