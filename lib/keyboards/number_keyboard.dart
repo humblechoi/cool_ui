@@ -26,13 +26,12 @@ class NumberKeyboard extends StatelessWidget {
     MediaQueryData mediaQuery = MediaQuery.of(context);
     return Material(
       child: DefaultTextStyle(
-          style: TextStyle(
-              fontWeight: FontWeight.w500, color: Colors.black, fontSize: 23.0),
+          style: TextStyle(color: Colors.black, fontSize: 23.0),
           child: Column(
             children: <Widget>[
               Container(
-                color: Colors.greenAccent,
-                height: 30,
+                color: Color.fromARGB(255, 69, 193, 170),
+                height: 40,
                 width: mediaQuery.size.width,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,16 +39,25 @@ class NumberKeyboard extends StatelessWidget {
                     FlatButton(
                       child: Text(
                         '적용',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                       onPressed: () {
                         controller.doneAction();
                       },
                     ),
+//                    FlatButton(
+//                      child: Text(
+//                        '모두삭제',
+//                        style: TextStyle(color: Colors.white),
+//                      ),
+//                      onPressed: () {
+//                        controller.deleteAll();
+//                      },
+//                    ),
                     FlatButton(
                       child: Text(
                         '삭제',
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                       onPressed: () {
                         controller.deleteOne();
@@ -62,7 +70,9 @@ class NumberKeyboard extends StatelessWidget {
                 height: getHeight(context),
                 width: mediaQuery.size.width,
                 decoration: BoxDecoration(
-                  color: Color(0xffafafaf),
+                  color: Colors.white,
+//                  color: Color(0xffafafaf),
+                  border: Border.all(color: Colors.white),
                 ),
                 child: GridView.count(
                     childAspectRatio: 2 / 1,
