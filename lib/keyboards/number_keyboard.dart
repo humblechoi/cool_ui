@@ -74,42 +74,41 @@ class NumberKeyboard extends StatelessWidget {
 //                  color: Color(0xffafafaf),
                   border: Border.all(color: Colors.white),
                 ),
-                child: IgnorePointer(
-                  child: GridView.count(
-                      childAspectRatio: 2 / 1,
-                      mainAxisSpacing: 0.5,
-                      crossAxisSpacing: 0.5,
-                      padding: EdgeInsets.all(0.0),
-                      crossAxisCount: 4,
-                      children: <Widget>[
-                        buildButton('1'),
-                        buildButton('2'),
-                        buildButton('3'),
-                        buildButton('박스'),
-                        buildButton('4'),
-                        buildButton('5'),
-                        buildButton('6'),
-                        buildButton('콘티'),
-                        buildButton('7'),
-                        buildButton('8'),
-                        buildButton('9'),
-                        buildButton('직접입력'),
-                        buildButton('0'),
-                        buildButton('00'),
-                        buildButton('000'),
+                child: GridView.count(
+                    childAspectRatio: 2 / 1,
+                    mainAxisSpacing: 0.5,
+                    crossAxisSpacing: 0.5,
+                    padding: EdgeInsets.all(0.0),
+                    crossAxisCount: 4,
+                    children: <Widget>[
+                      buildButton('1'),
+                      buildButton('2'),
+                      buildButton('3'),
+                      buildButton('박스'),
+                      buildButton('4'),
+                      buildButton('5'),
+                      buildButton('6'),
+                      buildButton('콘티'),
+                      buildButton('7'),
+                      buildButton('8'),
+                      buildButton('9'),
+                      buildButton('직접입력'),
+                      buildButton('0'),
+                      buildButton('00'),
+                      buildButton('0000'),
 
-                        Container(
-                          //color: Color(0xFFd3d6dd),
-                          child: GestureDetector(
-                            behavior: HitTestBehavior.translucent,
-                            child: Center(
-                              child: Icon(Icons.settings),
-                            ),
-                            onTap: () {
-                              controller.doneAction();
-                            },
+                      Container(
+                        //color: Color(0xFFd3d6dd),
+                        child: GestureDetector(
+                          behavior: HitTestBehavior.translucent,
+                          child: Center(
+                            child: Icon(Icons.settings),
                           ),
+                          onTap: () {
+                            controller.doneAction();
+                          },
                         ),
+                      ),
 //                  buildButton('00'),
 //                  Container(
 //                    color: Color(0xFFd3d6dd),
@@ -123,8 +122,7 @@ class NumberKeyboard extends StatelessWidget {
 //                      },
 //                    ),
 //                  ),
-                      ]),
-                ),
+                    ]),
               ),
             ],
           )),
